@@ -1,0 +1,9 @@
+
+*__pycache__
+wandb
+.idea
+inference/data
+data
+
+*.pt
+model_f.py
