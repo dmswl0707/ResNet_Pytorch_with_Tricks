@@ -1,8 +1,26 @@
 # ResNet_Pytorch
 
-Pytorch model for ResNet50. It is trained with CIFAR10 data.
+*Pytorch model for ResNet50. It is trained with CIFAR10 data.(there are No .pt file.)*
 
-It contain Colab codes. you can download .py files in Colab.
+*It contatined two ways.
+one thing is code for bringing the model from pytorch, and other thing is code for making the model by self.* 
+
+
+> model.py  - code for making the model
+> 
+> preprocessing.py  - preprocess the dataset and execute data argumentation.
+> 
+> DataLoader.py  - download and load the dataset.
+> 
+> training.py  - train wetights.
+> 
+> main.py  - exucute training.py
+> 
+> Args.py  - Args for revise hyper parameters.
+
+> inference  - the ways to test weights.
+> 
+> tricks  - the ways to add tricks, by training.  
 
 
 ## Network description 👇🏻👇🏻
