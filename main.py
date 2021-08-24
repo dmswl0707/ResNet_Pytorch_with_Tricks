@@ -7,7 +7,6 @@ if __name__ == "__main__":
     #fold_train(Args, train_df)
 
 
-
     # 웨이트 저장하기
 
     PATH = './weights/'

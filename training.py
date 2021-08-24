@@ -14,7 +14,7 @@ from model_f import Model
 
 
 #model = models.resnet50(pretrained=False)
-model = Model(num_classes=100)
+model = Model(num_classes=10)
 
 
 # wandb 오프라인으로 돌리기
@@ -31,8 +31,8 @@ device = Args["device"]
 network = model.to(device)
 print(device)
 
-optimizer = optim.Adam(model.parameters(), lr=Args["lr"], betas=(0.9, 0.999), eps=1e-08, weight_decay=Args["weight_decay"])
-scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=20, T_mult=1, eta_min=Args["eta_min"])
+optimizer = optim.Adam(model.parameters(), lr=Args["lr"], betas=(0.9, 0.99), weight_decay=Args["weight_decay"])
+scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=15, T_mult=1, eta_min=Args["eta_min"])
 
 Epoch = Args["Epoch"]
 patience = Args["patience"]

@@ -21,8 +21,6 @@ optimizer = optim.SGD(model.parameters(), Args["lr"], momentum=0.9, weight_decay
 
 save_path = '/workspace/pytorch/project_dir/Ratio_Image_Recognition/weights/' + 'model_state_dict.pt'
 
-# 한 에폭 돌 때 마다 가중치를 저장해야함....!
-# 다음 에폭 돌 떄, 그 에폭을 가지고 오도록
 
 def train():
 

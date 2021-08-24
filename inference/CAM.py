@@ -8,7 +8,12 @@ from DataLoader import testloader
 from Args import *
 
 #print(model)
-print(list(model.children())[-2])
+conv = list(model.children())[-3]
+#print(conv)
+params = list(model.parameters())
+features = params[-3].size()
+#print(features)
+
 
 PATH='/home/eunji/project_dir/cifar+ResNet/custom_model.pt'
 model.load_state_dict(torch.load(PATH))

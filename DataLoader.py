@@ -13,11 +13,11 @@ import matplotlib.pyplot as plt
 
 # cifar 10과 cifar 100 불러오기
 
-trainset = torchvision.datasets.CIFAR100(root='./data',train = True, download = True, transform = transforms_train)
-testset = torchvision.datasets.CIFAR100(root='./data',train = False, download = True, transform = transforms_test)
+#trainset = torchvision.datasets.CIFAR100(root='./data',train = True, download = True, transform = transforms_train)
+#testset = torchvision.datasets.CIFAR100(root='./data',train = False, download = True, transform = transforms_test)
 
-#trainset = torchvision.datasets.CIFAR10(root='./data',train = True, download = True, transform = transforms_train)
-#testset = torchvision.datasets.CIFAR10(root='./data',train = False, download = True, transform = transforms_test)
+trainset = torchvision.datasets.CIFAR10(root='./data',train = True, download = True, transform = transforms_train)
+testset = torchvision.datasets.CIFAR10(root='./data',train = False, download = True, transform = transforms_test)
 
 num_train = len(trainset)
 num_test = len(testset)
@@ -35,12 +35,11 @@ val_idx, train_idx = indice[:split], indice[split:]
 train_sampler = SubsetRandomSampler(train_idx)
 val_sampler = SubsetRandomSampler(val_idx)
 
-
 batch_size = Args["batch_size"]
 
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, sampler = train_sampler, num_workers=6)
-valloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, sampler = val_sampler, num_workers=6)
-testloader = torch.utils.data.DataLoader(testset, batch_size=1, shuffle=True, num_workers=6)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, sampler = train_sampler, num_workers=4)
+valloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, sampler = val_sampler, num_workers=4)
+testloader = torch.utils.data.DataLoader(testset, batch_size=1, shuffle=True, num_workers=4)
 
 categories = list(trainset.class_to_idx.keys())
 #print(categories)
