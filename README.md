@@ -1,4 +1,4 @@
-# ResNet_Pytorch
+# ResNet50_Pytorch
 
 *Pytorch model for ResNet50. It is trained with CIFAR10 data.(there are No .pt file.)*
 
